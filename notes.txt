@@ -1,5 +1,5 @@
 HTML
-- No need to close self-closing tags. i.e. <br /> can just use <br> instead. test
+- No need to close self-closing tags. i.e. <br /> can just use <br> instead.
 
 HTML Forms
 - Required attribute. i.e. <input type="text" required>
