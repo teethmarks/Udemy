@@ -1,0 +1,249 @@
+HTML
+- No need to close self-closing tags. i.e. <br /> can just use <br> instead.
+
+HTML Forms
+- Required attribute. i.e. <input type="text" required>
+- Password type <input type="password">
+- Add names and values for all of the fields e.g. <input type="text" name="firstname">
+- Form method should be using POST instead of GET, so they don't appear in the URL.
+
+CSS
+- selector: element + element = immediate neighbour e.g. h2 + p
+- em unit is x times the parent element
+- rem unit is x times the root element e.g. body
+
+Flexbox:
+- flexbox game: flexboxgfroggy.com
+- justify-content to arrange elements horizontally
+- align-items to arrange elements vertically
+- flex-direction: row to change order horizontally, column to change order vertically
+- flex-direction: when you set direction to a reverse, the start and end are also reversed
+- flex-flow: The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of one of the two properties separated by a space.
+- align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+
+Animation:
+- animate.css is a library with lots of animated effects that i can use.
+
+Javascript:
+- if else with ! looks like this if (!(firstName = "Bob"))
+- once you place a "!" in front, it means opposite. e.g. !true = false
+- prompt converts everything to a string. so if it's expecting a number, remember to put Number();
+- functions have (). in between those brackets is called an argument.
+- 2 ways of creating functions: function declaration & function expression:
+
+1) Function Declaration:
+function sayHello(){
+	console.log("Hello");
+}
+sayHello();
+
+2) Function Expression:
+var sayBye = function () {
+	console.log("Bye");
+}
+sayBye();
+The function was saved in a var just for it to be called. Else, it would just be an anonymous function.
+
+- Arguments (things that go into the brackets in functions. Sometimes called parameters.)
+- Use of Arguments in a function:
+function sing (song) {
+	console.log(song);
+}
+sing("Laaa Deee Daaa");
+sing("Backstreets back alright");
+By using arguments in a function, you can reference it in what you want it to do in the value passed when calling the function.
+i.e. in this case, whatever I type it in the value of the function, it will execute a console.log.
+
+- Use of Arguments in a function (multiple arguments):
+function multiply (a, b) {
+	return a * b
+}
+multiply(5, 10);
+You have to use "return" in order for the function to compute the value.
+Alternatively you can create a var as well to compute and then console.log it e.g.
+function multiply (a, b) {
+	var result = a/b;
+	console.log(result);
+} 
+But when you use "return", it will exit the function. "return" is like the close to a function.
+You can also wrap things over a function. e.g. alert(multiply(a,b));
+
+Arrays
+- a list that is stored in a var. Uses index e.g. 0,1,2,3
+- arrays can store functions too.
+- you can store arrays in arrays.
+- array methods can allow you to modify the array. Reference: https://www.w3schools.com/Jsref/jsref_obj_array.asp
+e.g.
+array.shift() = Removes the first element of an array, and returns that element
+array.pop() = Removes the last element of an array, and returns that element
+array.sort() = Sorts the elements of an array alphabetically
+array.push() = Adds new elements to the end of an array, and returns the new length
+array.reverse() = Reverses the order of the elements in an array alphabetically
+array.concat() = Joins two or more arrays, and returns a copy of the joined arrays
+For multi-level arrays, indent the list to make it easier to see visually - talk through it, and you will know how to access it by levels.
+- Every value is accessible.
+
+Objects
+- objects are "arrays" with property and value. e.g.
+var user = {
+	name: "John",
+	age: 34,
+	hobby: "Soccer",
+	isMarried: false
+};
+- to add a property, simply input user.newProperty = newValue; e.g. user.favouriteFood = "spinach";
+- you can add an array in an object e.g. user.skills = ["bicycle kick", "heading pass", "slide"];
+- you can ALSO have objects in an array (this is how you "create objects in an array"). e.g.
+var list = [
+	{
+		username: "andy",
+		password: "secret"
+	},
+	{
+		username: "jess",
+		password: "123"
+	}
+];
+- you can add a function in an object (which is called a Method). e.g. 
+shout: function() {
+	console.log("Ahhh");
+}
+- Every value is accessible.
+
+Methods
+- A function in an object is called a Method.
+
+Loops
+- for loop e.g.
+for (var i = 0; i < array.length; i++){
+	document.write(array[i] + "<br>");
+};
+- pretty standard loop which uses (var i = 0; i < array.length; i++) as its starting and stopping condition.
+
+---
+
+- while loop e.g.
+var counter = 0;
+while (counter < 10) {
+	counter++;
+	document.write(counter + "<br>");
+}
+- set the stopping condition after "while" e.g. (counter < 10).
+- the loop will start by itself when you use "while".
+- need to set a variable and its value
+
+---
+
+- do...while loop e.g.
+var counterDo = 10;
+do {
+	counterDo--;
+	document.write(counterDo + "<br>");
+}
+while (counterDo > 1);
+- this loop just starts without any condition.
+- the stopping condition is defined with a "while" right after the closing tag.
+
+---
+
+- forEach loop e.g.
+function shout(item, index){
+	document.write(item, index + '<br>')
+};
+fruits.forEach(shout);
+
+- No need start and stop!
+- Create a function (e.g. console.log) and place it in the forEach() brackets.
+- You can also add the function straight into the brackets instead of creating it first then adding it. e.g.
+array.forEach(function(item, index){
+	console.log(item, index);
+});
+- Reference to the array like this: array.forEach(functionName);
+- It will magically go through each and every item in the array and execute the function for each item.
+- In order to return the value of each item, use "item" (actually can be any name) but make sure it is the first argument of the function.
+- In order to return the index of each item, use "index" (actually can be any name) but make sure it is the 2nd argument of the function.
+
+Differences in these loops:
+- the for loop uses "i" to kinda define start from where and stops at where.
+- the while loop starts by itself but requires a condition like (counter < 10) so it will know where to stop.
+- the do loop starts by itself and doesn't care about anything else, and that's why "while" is needed at the end of the loop to stop it
+- the forEach loop doesn't need a start and stop at all, but requires a function which it will apply to each and every item in the array. Best option for loops, IMO.
+
+- Facebook 2 Problem
+1) I couldn't get get all 3 usernames to return true, because the loop kept exiting after the first true.
+2) be REALLY careful about using return. it will exit a loop the moment it hits.
+3) in a loop, you cannot use if else with a return, as the moment it hits true - it will exit
+4) in order for you to use a return in a loop, place the return false OUTSIDE of the if statement, and don't use "else".
+
+DOM Manipulation
+- document.querySelector('li'); will select the first li in this case.
+- document.querySelectorAll('li'); will select all <li>s.
+- you can also add 2 or more classes in the querySelector.
+- getAttribute('className'); will allow you to select something more specific.
+- setAttribute('className', 'green); will allow you to set the attribute.
+
+- assign an element to a var (make sure to do this to save memory) e.g.
+var myVar = document.querySelector('h1');
+- for a specific element, say if it's an <li> in a <ul>, you must use querySelectorAll[2]
+- once saved in a var, you can do this: myVar.classList
+- classList.add will add a class e.g. myVar.classList.add('active');
+- classList.remove will remove a class.remove('active');
+- classList.toggle will toggle a class (run it again to add/remove)
+- querySelector('h1').innerHTML = something; to change the HTML  (try not to use this)
+- .parentElemet will select the parent element
+- .children will select the children element
+
+DOM Events
+- Refer to "List" folder. Learnt about createElement, appendChild, and createTextNode!
+
+Callback Functions
+- Refer to "Callback Functions" folder. A callback is commonly used in an event listener to prevent a function from running by itself.
+
+Scope
+- A var within a function is the scope aka "child" of the function (parent).
+- You can call a global var outside of a function, but not call it in another function.
+
+Advanced Control Flow
+- Ternary Operator syntax: 
+condition ? expr1 : expr2
+Where expr1 = true condition, and expr2 is false statement.
+var answer = isUserValid(true) ? "You may enter" : "Access Denied";
+
+- Switch
+Instead of using many "if else"s, you can use switch statement for multi conditions.
+switch (something){
+	case "case1":
+	console.log("this is case1");
+	break;
+	case "case2":
+	console.log("this is case2");
+	break;
+	case "case3":
+	console.log("this is case3");
+	default:
+	console.log("the 'else' part);
+}
+
+ES6
+- Refer to ES6 folder. Start using const and let, arrow functions, and template strings!
+
+Advanced Functions
+- Closures: A function ran. The function executed. It's never ever going to run again. BUT it's going to remember that there are references to those variables, so the child scope always has access to the parent scope. Read up http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
+- Currying: is the process of breaking down a function into a series of functions that each take a single argument. Example:
+
+function sum3(x) {
+  return (y) => {
+    return (z) => {
+      return x + y + z;
+    };
+  };
+}
+console.log(sum3(1)(2)(3)) // 6
+
+- Compose: Read up https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a Example: 
+
+const compose = (f1, f2) => value => f1( f2(value) );
+
+- Best practice of functions: Functional Purity, avoiding side effects. Every function should be it's own universe. Have an input, run through a function, and it should return a value. Side effects are other values that are generated by a function (i.e. console logs)
+
