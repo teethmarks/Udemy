@@ -255,3 +255,7 @@ const compose = (f1, f2) => value => f1( f2(value) );
 
 123. Advanced Objects
 - Reference Type, Context and Instantiation
+
+125. ES7
+- .includes()
+- Expodential Operator (to the power of)
