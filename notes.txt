@@ -259,3 +259,21 @@ const compose = (f1, f2) => value => f1( f2(value) );
 125. ES7
 - .includes()
 - Expodential Operator (to the power of)
+
+127. ES8
+- padStart() and padEnd()
+- trailing commas
+- Object.values & Object.entries
+
+130. Debugging
+- use 'debugger' in your code to pause the code and open up the browser debugger
+- use the "step over" button to run the next line of code
+
+131. How Javascript Works
+- Allocate Memory (e.g. remember variables, etc)
+- Parse and execute aka read and run commands (e.g. run functions)
+- Memory Heap & Call Stack
+- Single Threaded (means one line at a time), unless you use things like API or setInterval
+- "Javascript is a single threaded language that can be non-blocking"
+- The Javascript run-time environment has Web Apis, Callback Queue and Event Loop
+- Differnece between Synchronous and Asynchronous
