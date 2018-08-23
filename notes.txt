@@ -277,3 +277,39 @@ const compose = (f1, f2) => value => f1( f2(value) );
 - "Javascript is a single threaded language that can be non-blocking"
 - The Javascript run-time environment has Web Apis, Callback Queue and Event Loop
 - Differnece between Synchronous and Asynchronous
+
+132. Modules
+- Inline JS, which is not ideal as you have to place this code on every html document.
+- Script tags, which might have dependancies on one another, and will be required in the HTML document.
+- ES6 + Webpack is the way to go as of now, creates a nice little JS file like 'bundle.js'
+
+134. Extra Javascript Practice
+1. https://github.com/getify/You-Dont-Know-JS
+2. http://javascript.info/
+3. http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/
+
+135. Optional Exercise: Javascript Logic
+- Skipped
+
+136. Using Cmd Prompt / Terminal
+- Know how to use already, sort of.
+
+139. Cool Packages for Sublime Text 3
+- GitGutter
+- BracketHighlighter
+
+140. Terminal
+- Customize Terminal
+- Shell is just the skin of the terminal
+- Use iTerm2 for mac, looks nicer.
+- Consider downloading Homebrew, and fish shell.
+
+143. Github Part 1
+- Try to use Terminal instead of SourceTree
+- git clone <git url> (to init)
+- git add (add index.html to do this one by one, use git . to add all)
+- git status (to see what are the files changes)
+- git commit -m "FIrst init" (to commit)
+- git push (to push)
+
+
